@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌩️ Cloud‑Native ADMM‑VRP Optimization Integrating Edge AI for Sustainable Real‑Time Supply Chains
 
-## Getting Started
+A hyperconverged, ADMM‑VRP syncretic framework enabling real‑time, edge‑augmented, zero‑trust logistics optimization via convex‑relaxed submodular decomposition under Kubernetes‑native microservice orchestration—maximizing allocative Pareto‑efficiency while minimizing thermodynamic externalities. :contentReference[oaicite:0]{index=0}
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📚 Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project demonstrates a cloud‑native approach to solving the Vehicle Routing Problem (VRP) using the Alternating Direction Method of Multipliers (ADMM), augmented with real‑time Edge AI inference. It’s built as a set of Kubernetes‑orchestrated microservices with a modern Next.js dashboard for visualization and control.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌟 Key Features
 
-## Learn More
+- **Distributed ADMM‑VRP Solver**  
+  Convex‑relaxed submodular decomposition for scalable route optimization.  
+- **Edge AI Integration**  
+  On‑device inference nodes adjust routes in real time based on live telemetry.  
+- **Zero‑Trust Security**  
+  mTLS and service mesh ensure secure cloud‑to‑edge communication.  
+- **Kubernetes Orchestration**  
+  Helm charts and auto‑scaling for resilience and performance.  
+- **Next.js Dashboard**  
+  Component‑driven UI with server‑side rendering and static export.  
+- **GitOps CI/CD**  
+  GitHub Actions for build, test, and Kubernetes deployments.  
+- **Monitoring & Observability**  
+  Integrated Prometheus metrics and Grafana dashboards.  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend:** Next.js, React, TypeScript  
+- **Styling:** Tailwind CSS, PostCSS  
+- **Backend/API:** Next.js API Routes (Node.js)  
+- **Optimization Engine:** Python (CVXPY, NumPy) served via gRPC  
+- **Edge AI:** TensorFlow.js / ONNX Runtime  
+- **Containerization:** Docker, Docker Compose  
+- **Orchestration:** Kubernetes, Helm  
+- **Messaging:** gRPC, MQTT  
+- **CI/CD:** GitHub Actions  
+- **Monitoring:** Prometheus, Grafana  
+- **Database & Cache:** PostgreSQL, Redis  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗂️ Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```plaintext
+.
+├── components/           # Reusable React UI components
+├── services/             # Microservices
+│   ├── optimizer/        # ADMM‑VRP solver service (Python)
+│   └── edge-node/        # Edge AI inference service
+├── prisma/               # Prisma schema & migrations
+├── public/               # Static assets
+├── src/
+│   ├── pages/            # Next.js pages & API routes
+│   ├── lib/              # Utility functions & API clients
+│   └── styles/           # Tailwind CSS imports
+├── helm/                 # Helm charts for k8s deployment
+├── k8s/                  # Kubernetes manifests
+├── .github/              # GitHub Actions workflows
+├── Dockerfile            # UI container definition
+├── docker-compose.yml    # Local orchestration
+├── package.json          # UI dependencies & scripts
+├── requirements.txt      # Python service dependencies
+├── tailwind.config.ts    # Tailwind configuration
+└── tsconfig.json         # TypeScript configuration
